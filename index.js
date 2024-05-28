@@ -75,7 +75,7 @@ function fetchAndDisplayPokemon(pokemonName) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetchAndDisplayPokemon("charizard");
+  fetchAndDisplayPokemon(charizard);
 });
 
 submitBtn.addEventListener("click", () => {
