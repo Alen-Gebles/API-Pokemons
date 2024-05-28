@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="inputBox">
+      <input id="inputPokemon" placeholder="Pokemon name...">
+      <button id="submitBtn">Search</button>
+    </div>
+    <div class="imagesBox">
+      <img src="" id="pokeImgFront">
+      <img src="" id="pokeImgBack">
+    </div>
+    <p id="name"></p>
+
+    <div class="pokeStats">
+      <div class="hpBox stats">
+        <p class="statName">HP</p>
+        <div class="progressBar "><span class="progress" id="hpProgress"></span></div>
+        <p id="hpNumber" class="statNumber"></p>
+      </div>
+
+      <div class="defenceBox stats">
+        <p class="statName">DEFENSE</p>
+        <div class="progressBar "><span class="progress" id="defenseProgress"></span></div>
+        <p id="defenseNumber" class="statNumber"></p>
+      </div>
+
+      <div class="attackBox stats">
+        <p class="statName">ATTACK</p>
+        <div class="progressBar "><span class="progress" id="attackProgress"></span></div>
+        <p id="attackNumber" class="statNumber"></p>
+      </div>
+
+      <div class="specialDefenceBox stats">
+        <p class="statName">SPECIAL DEFENSE</p>
+        <div class="progressBar "><span class="progress" id="specialDefenseProgress"></span></div>
+        <p id="specialDefenseNumber" class="statNumber"></p>
+      </div>
+
+      <div class="specialAttackBox stats">
+        <p class="statName">SPECIAL ATTACK</p>
+        <div class="progressBar "><span class="progress" id="specialAttackProgress"></span></div>
+        <p id="specialAttackNumber" class="statNumber"></p>
+      </div>
+
+      <div class="speedBox stats">
+        <p class="statName">SPEED</p>
+        <div class="progressBar "><span class="progress" id="speedProgress"></span></div>
+        <p id="speedNumber" class="statNumber"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
