@@ -5,9 +5,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   overflow: hidden;
   font-family: Montserrat;
   background-color: #33a165;
+  background : linear-gradient(to bottom,rgba(255, 255, 255, 0.030) 0%, rgba(0, 0, 0, 0.55) 100%), none;
   color: rgb(253, 253, 253);
 }
 .container{
@@ -21,13 +23,14 @@ body{
   margin-inline: 20px;
 }
 .inputBox{
-  position: absolute;
-  top: 50px;
+  position: relative;
+  top: 80px;
   width: 100%;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: -50px;
 }
 #submitBtn{
   height: 43px;
@@ -102,7 +105,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 40px;
+  gap: 25px;
   margin-top: 50px;
 }
 .stats{
@@ -141,4 +144,18 @@ body{
   height: 100%;
   background-color: rgb(253, 253, 253);
   border-radius: 8px;
+}
+.pokePsy{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+}
+.psyBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.psyBox p{
+  margin: 0;
 }
