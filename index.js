@@ -41,32 +41,32 @@ function fetchAndDisplayPokemon(pokemonName) {
       document.getElementById("weight").textContent = `${data.weight}kg`;
       document.getElementById("abilities").textContent = data.abilities[0].ability.name;
 
-      // Find the HP base stat
+      // HP base stat
       const hpStat = data.stats.find(stat => stat.stat.name === "hp");
       document.getElementById("hpNumber").textContent = hpStat.base_stat;
       document.getElementById("hpProgress").style.width = `${hpStat.base_stat * 0.8}%`;
 
-      // Find the DEFENSE base stat
+      // DEFENSE base stat
       const defenseStat = data.stats.find(stat => stat.stat.name === "defense");
       document.getElementById("defenseNumber").textContent = defenseStat.base_stat;
       document.getElementById("defenseProgress").style.width = `${defenseStat.base_stat * 0.8}%`;
 
-      // Find the ATTACK base stat
+      // ATTACK base stat
       const attackStat = data.stats.find(stat => stat.stat.name === "attack");
       document.getElementById("attackNumber").textContent = attackStat.base_stat;
       document.getElementById("attackProgress").style.width = `${attackStat.base_stat * 0.8}%`;
 
-      // Find the SPECIAL DEFENSE base stat
+      // SPECIAL DEFENSE base stat
       const specialDefenseStat = data.stats.find(stat => stat.stat.name === "special-defense");
       document.getElementById("specialDefenseNumber").textContent = specialDefenseStat.base_stat;
       document.getElementById("specialDefenseProgress").style.width = `${specialDefenseStat.base_stat * 0.8}%`;
 
-      // Find the SPECIAL ATTACK base stat
+      // SPECIAL ATTACK base stat
       const specialAttackStat = data.stats.find(stat => stat.stat.name === "special-attack");
       document.getElementById("specialAttackNumber").textContent = specialAttackStat.base_stat;
       document.getElementById("specialAttackProgress").style.width = `${specialAttackStat.base_stat * 0.8}%`;
 
-      // Find the SPEED base stat
+      // SPEED base stat
       const speedStat = data.stats.find(stat => stat.stat.name === "speed");
       document.getElementById("speedNumber").textContent = speedStat.base_stat;
       document.getElementById("speedProgress").style.width = `${speedStat.base_stat * 0.8}%`;
@@ -74,9 +74,8 @@ function fetchAndDisplayPokemon(pokemonName) {
     .catch(error => console.error('Error:', error));
 }
 
-// Fetch a default Pokémon when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  fetchAndDisplayPokemon("charizard"); // You can choose any default Pokémon
+  fetchAndDisplayPokemon("charizard");
 });
 
 submitBtn.addEventListener("click", () => {
