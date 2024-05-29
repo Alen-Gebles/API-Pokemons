@@ -1,6 +1,7 @@
 const inputPokemon = document.getElementById("inputPokemon");
 const submitBtn = document.getElementById("submitBtn");
 const body = document.body;
+const PokeElement = document.getElementById("PokeElement");
 
 const typeColors = {
   fire: "#ff7402",
@@ -42,6 +43,11 @@ const updateStats = (stats, statName, elementIdNumber, elementIdProgress) => {
   updateElementStyle(elementIdProgress, "width", `${stat.base_stat * 0.8}%`);
 };
 
+document.getElementById("randomBtn").addEventListener("click", () => {
+  const mthRan = Math.floor(Math.random() * 1307);
+  fetchAndDisplayPokemon(mthRan);
+})
+
 function fetchAndDisplayPokemon(pokemonName) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then(response => response.json())
@@ -57,6 +63,8 @@ function fetchAndDisplayPokemon(pokemonName) {
       updateElementContent("height", `${data.height}m`);
       updateElementContent("weight", `${data.weight}kg`);
       updateElementContent("abilities", data.abilities[0].ability.name);
+      PokeElement.textContent = element.toUpperCase();
+      
 
       const stats = data.stats;
       updateStats(stats, "hp", "hpNumber", "hpProgress");

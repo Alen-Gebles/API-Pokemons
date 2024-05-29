@@ -63,6 +63,35 @@ body{
   font-size: 17px;
   box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.067), 2px 2px 5px rgba(0, 0, 0, 0.087);
 }
+#randomBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  width: auto;
+  padding-inline: 15px;
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: #ffffff20;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  transition: 200ms;
+  font-size: 17px;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.111), 2px 2px 5px rgba(0, 0, 0, 0.072);
+}
+#randomBtn:hover{
+  background-color: #ffffff32;
+}
+#randomBtn:active,
+#submitBtn:active{
+  background-color: #ffffff26;
+}
+#randomBtn svg{
+  width: 20px;
+  height: 20px;
+}
 #inputPokemon:focus{
   outline: none;
 }
@@ -97,7 +126,9 @@ body{
   font-weight: 400
 }
 #PokeElement{
-  font-size: max(13px, min(4vw, 20px));
+  position: relative;
+  top: 5px;
+  font-size: max(13px, min(4vw, 17px));
   margin: 0;
   margin-left: 5px;
 }
