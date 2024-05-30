@@ -38,7 +38,7 @@ const updateElementStyle = (elementId, styleProperty, value) => {
 };
 
 const updateStats = (stats, statName, elementIdNumber, elementIdProgress) => {
-  const stat = stats.find(stat => stat.stat.name === statName);
+  const stat = stats.find((stat) => stat.stat.name === statName);
   updateElementContent(elementIdNumber, stat.base_stat);
   updateElementStyle(elementIdProgress, "width", `${stat.base_stat * 0.8}%`);
 };
@@ -46,14 +46,14 @@ const updateStats = (stats, statName, elementIdNumber, elementIdProgress) => {
 document.getElementById("randomBtn").addEventListener("click", () => {
   const mthRan = Math.floor(Math.random() * 1307);
   fetchAndDisplayPokemon(mthRan);
-})
+});
 
 function fetchAndDisplayPokemon(pokemonName) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       console.log(data);
-      
+
       const element = data.types[0].type.name;
       setBackgroundColor(element);
 
@@ -64,17 +64,26 @@ function fetchAndDisplayPokemon(pokemonName) {
       updateElementContent("weight", `${data.weight}kg`);
       updateElementContent("abilities", data.abilities[0].ability.name);
       PokeElement.textContent = element.toUpperCase();
-      
 
       const stats = data.stats;
       updateStats(stats, "hp", "hpNumber", "hpProgress");
       updateStats(stats, "defense", "defenseNumber", "defenseProgress");
       updateStats(stats, "attack", "attackNumber", "attackProgress");
-      updateStats(stats, "special-defense", "specialDefenseNumber", "specialDefenseProgress");
-      updateStats(stats, "special-attack", "specialAttackNumber", "specialAttackProgress");
+      updateStats(
+        stats,
+        "special-defense",
+        "specialDefenseNumber",
+        "specialDefenseProgress"
+      );
+      updateStats(
+        stats,
+        "special-attack",
+        "specialAttackNumber",
+        "specialAttackProgress"
+      );
       updateStats(stats, "speed", "speedNumber", "speedProgress");
     })
-    .catch(error => console.error('Error:', error));
+    .catch((error) => console.error("Error:", error));
 }
 
 document.addEventListener("DOMContentLoaded", () => {

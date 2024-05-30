@@ -6,7 +6,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: Montserrat;
   background-color: #33a165;
   background : linear-gradient(to bottom,rgba(255, 255, 255, 0.030) 0%, rgba(0, 0, 0, 0.55) 100%), none;
@@ -20,6 +20,7 @@ body{
   border-radius: 5px;
   padding: 35px;
   margin-inline: 30px;
+  padding-bottom: 100px;
 }
 .inputBox{
   position: relative;
@@ -31,6 +32,7 @@ body{
   justify-content: center;
   top: -50px;
   margin-inline: 30px;
+  padding-top: 100px;
 }
 #submitBtn{
   height: 43px;
