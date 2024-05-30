@@ -207,6 +207,6 @@ body{
     gap:10px;
   }
   body{
-    padding-block: 35px;
+    height: 100%;
   }
 }
